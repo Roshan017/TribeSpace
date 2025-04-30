@@ -10,7 +10,6 @@ const Home = () => {
     isPending: isPostLoading,
     isError: isErrorPosts,
   } = GetPosts();
-  console.log(posts);
   return (
     <div className="flex flex-1">
       <div className="home-container">

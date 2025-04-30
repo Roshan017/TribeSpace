@@ -33,7 +33,7 @@ const Explore = () => {
       </div>
     );
   }
-  console.log(posts);
+  //console.log(posts);
   const ShowsearchResults = search !== "";
   const shouldShowPosts =
     !ShowsearchResults &&

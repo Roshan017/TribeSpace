@@ -192,7 +192,7 @@ export function getFilePreview(fileId: string) {
 export async function deleteFile(fileId: string) {
   try {
     await storage.deleteFile(appwriteConfig.storageId, fileId);
-    console.log("Deleted From Storage");
+    //console.log("Deleted From Storage");
     return { status: "ok" };
   } catch (error) {
     console.log(error);
@@ -251,7 +251,7 @@ export async function savePost(userId: string, postId: string) {
   }
 }
 export async function deleteSavedPost(savedRecordId: string) {
-  console.log(savedRecordId);
+  //console.log(savedRecordId);
   try {
     const status = await database.deleteDocument(
       appwriteConfig.databaseId,
