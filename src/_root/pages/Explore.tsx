@@ -75,7 +75,7 @@ const Explore = () => {
         {ShowsearchResults ? (
           <SearchResults
             isFetching={isFetching}
-            searchedPosts={searchedPosts}
+            searchedPosts={searchedPosts?.documents || []}
           />
         ) : shouldShowPosts ? (
           <p className="text-light-4 mt-10 text-center w-full">End of Posts</p>

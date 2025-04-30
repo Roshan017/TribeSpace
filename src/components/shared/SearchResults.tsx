@@ -11,8 +11,8 @@ const SearchResults = ({ isFetching, searchedPosts }: SearchResultsProps) => {
   if (isFetching) {
     <Loader />;
   }
-  if (searchedPosts && searchedPosts.documents.length > 0) {
-    return <GridPosts posts={searchedPosts.documents} />;
+  if (searchedPosts && searchedPosts.length > 0) {
+    return <GridPosts posts={searchedPosts} />;
   }
   return (
     <p className="text-light-4 mt-10 text-center w-full">No Results Found</p>
