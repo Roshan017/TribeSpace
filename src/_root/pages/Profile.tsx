@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Route,
   Routes,
@@ -14,7 +13,7 @@ import { useGetUserbyID } from "@/lib/react-query/queriesAndMutations";
 import Loader from "@/components/shared/Loader";
 import GridPosts from "@/components/shared/GridPosts";
 import LikedPost from "./LikedPost";
-import { toast, useToast } from "@/hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 interface StabBlockProps {
   value: string | number;

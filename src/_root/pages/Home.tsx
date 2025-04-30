@@ -1,15 +1,10 @@
-import Loader from "@/components/shared/loader";
+import Loader from "@/components/shared/Loader";
 import PostCard from "@/components/shared/PostCard";
 import { GetPosts } from "@/lib/react-query/queriesAndMutations";
 import { Models } from "appwrite";
-import React from "react";
 
 const Home = () => {
-  const {
-    data: posts,
-    isPending: isPostLoading,
-    isError: isErrorPosts,
-  } = GetPosts();
+  const { data: posts, isPending: isPostLoading } = GetPosts();
   return (
     <div className="flex flex-1">
       <div className="home-container">

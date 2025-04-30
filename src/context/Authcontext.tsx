@@ -3,6 +3,7 @@ import { IContextType, IUser } from "@/types";
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const INITIAL_USER: IUser = {
   id: "",
   name: "",

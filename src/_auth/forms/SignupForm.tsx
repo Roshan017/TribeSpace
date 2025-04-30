@@ -10,10 +10,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import React from "react";
 import { SignupValidation } from "@/lib/validation/schemas";
 import { z } from "zod";
-import Loader from "@/components/shared/loader";
+import Loader from "@/components/shared/Loader";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import {
@@ -24,12 +23,12 @@ import { useUserContext } from "@/context/Authcontext";
 const SignupForm = () => {
   const navigate = useNavigate();
   const { toast } = useToast(); // Corrected to use the toast hook
-  const { checkAutheUser, isLoading: isUserLoading } = useUserContext();
+  const { checkAutheUser } = useUserContext();
 
   const { mutateAsync: createUserAcc, isPending: isCreatingUser } =
     useCreateUSerAccMutation();
 
-  const { mutateAsync: siginAcc, isPending: isSigningIn } = useSignInAccount();
+  const { mutateAsync: siginAcc } = useSignInAccount();
 
   const form = useForm<z.infer<typeof SignupValidation>>({
     resolver: zodResolver(SignupValidation),

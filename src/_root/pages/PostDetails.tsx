@@ -10,7 +10,6 @@ import {
   useGetPostbyId,
 } from "@/lib/react-query/queriesAndMutations";
 import { multiFormatDateString } from "@/lib/utils";
-import React from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 const PostDetails = () => {

@@ -362,7 +362,6 @@ export async function deletePost(postId: string, imageId: string) {
     return { status: "ok" };
   } catch (e) {
     console.error("Error deleting post:", e);
-    return { status: "error", message: e.message };
   }
 }
 

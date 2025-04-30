@@ -10,7 +10,7 @@ import {
   useGetPost,
   useSearchPost,
 } from "@/lib/react-query/queriesAndMutations";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Explore = () => {
   const { data: posts, fetchNextPage, hasNextPage } = useGetPost();

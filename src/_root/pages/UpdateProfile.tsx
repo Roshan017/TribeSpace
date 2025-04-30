@@ -12,7 +12,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { Textarea } from "@/components/ui/textarea";
 import { useUserContext } from "@/context/Authcontext";
 import { ProfileValidation } from "@/lib/validation/schemas";
 import {
@@ -40,7 +39,7 @@ const UpdateProfile = () => {
     },
   });
   const { data: currentuser } = useGetUserbyID(id || "");
-  const { mutateAsync: updateUser, isLoading: isLoaded } = useUpdateUser();
+  const { mutateAsync: updateUser, isPending: isLoaded } = useUpdateUser();
   //console.log(currentuser);
   if (!currentuser) {
     return (
