@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   useQuery,
   useMutation,
@@ -166,13 +167,15 @@ export const useDeletePost = () => {
 export const useGetPost = () => {
   return useInfiniteQuery({
     queryKey: [QUERY_KEYS.GET_INFINITE_POSTS],
-    queryFn: getInfinitePosts,
-    getNextPageParam: (last) => {
+    queryFn: getInfinitePosts as any,
+    getNextPageParam: (last: any) => {
       if (last && last.documents.length === 0) return null;
 
       const LastId = last?.documents[last?.documents.length - 1].$id;
       return LastId;
     },
+    initialPageParam: 0, // You can change this depending on the pagination logic
+    initialData: undefined, // Or provide an actual initial value for the data here if needed
   });
 };
 
