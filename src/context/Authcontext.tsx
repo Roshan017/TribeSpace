@@ -72,6 +72,7 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     };
 
     validateAuth();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
 
   const value: IContextType = {
@@ -87,4 +88,5 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default AuthProvider;
+// eslint-disable-next-line react-refresh/only-export-components
 export const useUserContext = () => useContext(AuthContext);

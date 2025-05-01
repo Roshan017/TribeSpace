@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 
 import { useDropzone, FileWithPath } from "react-dropzone";
 
@@ -19,6 +19,7 @@ const ProfileUploader = ({ fieldchange, mediaUrl }: ProfileUpdateProps) => {
       fieldchange(acceptedFiles);
       setFileUrl(convertFileToUrl(acceptedFiles[0]));
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [file]
   );
   const { getRootProps, getInputProps } = useDropzone({

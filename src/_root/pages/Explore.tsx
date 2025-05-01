@@ -24,6 +24,7 @@ const Explore = () => {
     if (inView && !search) {
       fetchNextPage();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView, search]);
 
   if (!posts) {
