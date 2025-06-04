@@ -30,11 +30,16 @@ Experience TribeSpace in action: [TribeSpace](https://tribespace.netlify.app/sig
    git clone https://github.com/Roshan017/TribeSpace.git
    cd TribeSpace
 2. **Install dependencies:**
-      npm install
-      # or
-      yarn install
+   
+   ```bash
+   npm install
+   or
+   yarn install
+
 3. **Start the development server:**
-        npm run dev
-        # or
-        yarn dev
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
 
