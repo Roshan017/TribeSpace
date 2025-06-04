@@ -19,8 +19,8 @@ Experience TribeSpace in action: [TribeSpace](https://tribespace.netlify.app/sig
 - **Frontend**: React, TypeScript, Vite
 - **Styling**: Tailwind CSS
 - **State Management**: Context API
-- **Backend**: Firebase (Authentication and Firestore Database)
-- **Deployment**: Vercel
+- **Backend**: AppWrite
+- **Deployment**: Netlify
 
 ## 📦 Installation
 
